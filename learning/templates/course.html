@@ -1,0 +1,179 @@
+{% extends 'partials/base.html' %} {% load static %} {% block content %}
+<section>
+  <!-- Intro -->
+  <div class="container">
+    {%for i in courses%} {%if i.about_to_start%}
+    <div class="intro pb-5">
+      <div class="intro-text">
+        <h1 class="intro-h1">
+          {{i.name}}
+        </h1>
+        <p class="front-page">{{i.description}}</p>
+        <div class="buttons">
+          <a href="{%url 'about' i.id%}" class="btn-fill">Read More</a>
+          <a href="{%url 'about' i.id%}" class="btn-outline">Enroll Now</a>
+        </div>
+      </div>
+      <div class="intro-img c-img">
+        <img src="{{i.image.url}}" alt="" style="width: 100%" />
+      </div>
+      <div class="scroll">
+        <a href="#variations"
+          ><img
+            src="{% static 'img/icon/icon-scroll-down.svg' %}"
+            alt=""
+          /><span class="text-muted">Scroll down</span></a
+        >
+      </div>
+    </div>
+    {%endif%} {%endfor%}
+
+    <!-- Variations -->
+    <div id="variations" class="variations pt-0">
+      {% for course in courses %} {%if forloop.counter|divisibleby:2%}
+      <div class="container m-25">
+        <div class="first-variation">
+          <div class="img">
+            <img src="{{course.image.url}}" style="width: 100%" alt="" />
+          </div>
+          <div class="text">
+            <h1 class="variations-h1">{{course.name}}</h1>
+            <p class="front-page">{{course.description | truncatechars:200}}</p>
+            <div class="buttons">
+              {%if course.about_to_start%}
+              <a href="{%url 'about' course.id%}" class="btn-fill">Read More</a>
+              <a href="{%url 'about' course.id%}" class="btn-outline"
+                >Enroll Today</a
+              >
+              {%else%}
+              <a href="{%url 'about' course.id%}" class="btn-fill">Read More</a>
+              <a href="{%url 'about' course.id%}" class="btn-outline">
+                Bulk Now</a
+              >
+              {%endif%}
+            </div>
+          </div>
+        </div>
+      </div>
+      {%else%}
+      <div class="container mt-25 pt-25">
+        <div class="first-variation mt-25">
+          <div class="text">
+            <h1 class="variations-h1">{{course.name}}</h1>
+            <p class="front-page">{{course.description | truncatechars:200}}</p>
+            <div class="buttons">
+              {%if course.about_to_start%}
+              <a href="{%url 'about' course.id%}" class="btn-fill">Read More</a>
+              <a href="{%url 'about' course.id%}" class="btn-outline"
+                >Enroll Today</a
+              >
+              {%else%}
+              <a href="{%url 'about' course.id%}" class="btn-fill">Read More</a>
+              <a href="{%url 'about' course.id%}" class="btn-outline">
+                Bulk Now</a
+              >
+              {%endif%}
+            </div>
+          </div>
+          <div class="img">
+            <img
+              src="{{course.image.url}}"
+              alt="Course image"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+      </div>
+      {%endif%} {%empty%}
+      <div class="container w-100 h-100 m-auto">
+        <h1 class="d-flex justify-content-center align-items-center">
+          sorry nothing is available for now
+        </h1>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Service -->
+    <div class="service">
+      <h1>Top Notch Service</h1>
+
+      <div class="service-items">
+        <div class="item">
+          <img src="{% static 'img/icon/code-icon.svg' %}" alt="" />
+          <span class="counter">7 453 664</span>
+          <span>Kilometers <br />of code written</span>
+        </div>
+        <div class="item">
+          <img src="{% static 'img/icon/cofee-icon.svg' %}" alt="" />
+          <span class="counter">43 657</span>
+          <span>Coffees<br />drunk</span>
+        </div>
+        <div class="item">
+          <img src="{% static 'img/icon/satisfied-client-icon.svg' %}" alt="" />
+          <span class="counter">1 764</span>
+          <span>Satisfied<br />students</span>
+        </div>
+        <div class="item">
+          <img
+            src="{% static 'img/icon/realized-projects-icon.svg' %}"
+            alt=""
+          />
+          <span class="counter">36 874</span>
+          <span>Realized<br />projects</span>
+        </div>
+      </div>
+    </div>
+    <!-- Newsletter -->
+
+    <div class="update-news">
+      <div class="row">
+        <div class="col-md-5 news-text">
+          <h2>Get your update news</h2>
+          <p>
+            Put in your email to get notificate when a class is about Beginning.
+          </p>
+        </div>
+        <div class="col-md-7 news-form">
+          <form method="post">
+            {% csrf_token%} {{form.email}}
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team -->
+    {% comment %}
+    <div class="team text-center">
+      <h1>Our Team</h1>
+      <p class="front-page">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
+      </p>
+      <div class="team-person">
+        <div class="person">
+          <div class="photo"><img src="img/team-1.png" alt="" /></div>
+          <span class="name">John Fox</span>
+          <span>Marketing Manager</span>
+        </div>
+        <div class="person">
+          <div class="photo"><img src="img/team-2.png" alt="" /></div>
+          <span class="name">Kate Rose</span>
+          <span>SEO</span>
+        </div>
+        <div class="person">
+          <div class="photo"><img src="img/team-3.png" alt="" /></div>
+          <span class="name">Anna Brown</span>
+          <span>UI Expert</span>
+        </div>
+        <div class="person">
+          <div class="photo"><img src="img/team-4.png" alt="" /></div>
+          <span class="name">Mike Doe</span>
+          <span>Web Developer</span>
+        </div>
+      </div>
+    </div>
+    {% endcomment %}
+  </div>
+</section>
+{% endblock content%}

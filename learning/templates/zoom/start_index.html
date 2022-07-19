@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- For Client View -->
+  <link type="text/css" rel="stylesheet" href="{% static 'node_modules/@zoomus/websdk/dist/css/bootstrap.css'%}" />
+  <link type="text/css" rel="stylesheet" href="{% static 'node_modules/@zoomus/websdk/dist/css/react-select.css'%}" />
+</head>
+<body>
+  <input type="hidden" name="sdkKey" value="{{sdkKey}}">
+  <input type="hidden" name="signature" value="{{signature}}">
+  <input type="hidden" name="meetingNumber" value="{{zoomNumber}}">
+  <input type="hidden" name="passWord" value="{{passWord}}">
+  <input type="hidden" name="zakToken" value="{{takToken}}">
+  
+  <!-- For Component and Client View -->
+  <script src="https://source.zoom.us/2.4.5/lib/vendor/react.min.js"></script>
+  <script src="https://source.zoom.us/2.4.5/lib/vendor/react-dom.min.js"></script>
+  <script src="https://source.zoom.us/2.4.5/lib/vendor/redux.min.js"></script>
+  <script src="https://source.zoom.us/2.4.5/lib/vendor/redux-thunk.min.js"></script>
+  <script src="https://source.zoom.us/2.4.5/lib/vendor/lodash.min.js"></script>
+  
+  <!-- For Client View -->
+  <script src="<script src="{% static 'node_modules/@zoomus/websdk/dist/zoom-meeting-2.4.5.min.js' %}"></script>"></script>
+  
+  <!-- For Component View -->
+  {% comment %} <script src="https://source.zoom.us/2.4.5/zoom-meeting-embedded-2.4.5.min.js"></script> {% endcomment %}
+  
+</body>
+</html>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Zoom Meeting SDK Sample JavaScript</title>
+
+    <!-- For Client View -->
+    <link type="text/css" rel="stylesheet" href="{% static 'meetingsdk/css/bootstrap.css '%}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'meetingsdk/css/react-select.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'meetingsdk/styles.css'%}">
+
+    <meta http-equiv="origin-trial" content="">
+  </head>
+  <body>
+    <input type="hidden" name="zoomProfile" value="{{zoomProfile}}">
+    <input type="hidden" name="sdkKey" value="{{sdkKey}}">
+    <input type="hidden" name="signature" value="{{signature}}">
+    <input type="hidden" name="meetingNumber" value="{{zoomNumber}}">
+    <input type="hidden" name="passWord" value="{{passWord}}">
+
+    <script src="{% static 'js/alertify.min.js' %}"></script>
+    <script src="{% static 'dist/js/jquery.js' %}"></script>
+
+    <!-- For Component and Client View -->
+    <script src="https://source.zoom.us/2.4.5/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/2.4.5/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/2.4.5/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/2.4.5/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/2.4.5/lib/vendor/lodash.min.js"></script>
+
+    <!-- For Client View -->
+    <script src="{% static 'meetingsdk/zoom-meeting-2.4.5.min.js' %}"></script>
+    <script src="{% static 'js/start_zoom.js' %}"></script>
+  </body>
+</html>
+
+

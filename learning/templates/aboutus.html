@@ -1,0 +1,131 @@
+{%extends 'partials/base.html'%}{%load static%} {%block content%}
+{% block style %}
+  <style>
+    @media only screen and (min-width: 768px){
+    .card{
+      width: 70%;
+    }
+  }
+  video{
+    opacity: 0.5;
+  }
+  </style>
+{% endblock style %}
+<section>
+  <div class="container">
+  <div class="intro mt-0 pt-0">
+    <div class="intro-text">
+      <h1 class="intro-h1">{{abouts.name}}</h1>
+      <p class="front-page">{{abouts.description | truncatechars:200}}</p>
+      {%if abouts.about_to_start%}
+      {% if payeds %}
+      <div class="buttons">
+        {% if there_is_zoom %} 
+        <a href="{% url 'classes' abouts.id %}" class="btn-fill">Attend Class</a>
+        {% else %}
+        <a href="{% url 'no_class' abouts.id %}" class="btn-fill">Attend Class</a>
+        {% endif %}
+        <a href="{% url 'upgrade_enroll' abouts.id payment_id%}" class="btn-outline">Upgrade Bundle</a>
+      </div>
+      {% else %}
+      <div class="buttons">
+        <a href="{% url 'enroll' abouts.id%}" class="btn-fill">Enroll Now</a>
+      </div>
+      {% endif %}
+      {%else%}
+      {% csrf_token %}
+      <input type="hidden" name="course_id" value="{{ abouts.id }}">
+      <div class="buttons">
+        <button type="button" class="btn-fill bulk-btn">Bulk Now</button>
+      </div>
+      {%endif%}
+    </div>
+    <div class="intro-img">
+      <img src="{{abouts.image.url}}" alt="" />
+    </div>
+    <div class="scroll">
+      <a href="#variations"
+        ><img src="img/icon/icon-scroll-down.svg" alt="" /><span
+          class="text-muted"
+          >Scroll down</span
+        ></a
+      >
+    </div>
+  </div>
+</section>
+
+{% if faq %}
+<section id="questions" class="p-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion accordion-flush" id="Questions">
+      {% for q in faq %}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading-{{forloop.counter}}">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapse-{{forloop.counter}}"
+            aria-expanded="false"
+            aria-controls="flush-collapse-{{forloop.counter}}"
+          >
+            {{q.question}}
+          </button>
+        </h2>
+        <div
+          id="flush-collapse-{{forloop.counter}}"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-heading-{{forloop.counter}}"
+          data-bs-parents="#questions"
+        >
+          <div class="accordion-body">{{q.answer}}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% if instructor %}
+<section id="instructors" class="p-5 bg-primary">
+  <h2 class="text-center text-white">Our Instructors</h2>
+  <p class="lead text-center text-white mb-5">
+    Our Instructors all have 5+ years working as an expert in there perspective
+  </p>
+  <diV class="row g-4 justify-content-center">
+    {%for i in instructor %}
+    <div class="col col-sm-12">
+      <div class="card bg-light">
+        <img src="{{ i.image.url }}" class="card-img img mb-3" alt="" style="height: 2%">
+        <div class="card-body text-center">
+          <h3 class="card-title mb-3">{{i.name}}</h3>
+          <p class="card-text">{{i.title}}</p>
+          {% if i.twitter %}
+          <a href="{{i.twitter}}" class="me-2 way text-reset"
+                ><img src="{% static 'img/icon/social-media-03.svg' %}" alt=""
+              style="width: 30px; height: 30px;"/></a>
+          {% endif %}
+          {% if i.facebook %}
+          <a href="{{i.facebook}}" class="me-2 way text-reset"
+                ><img src="{% static 'img/icon/social-media-02.svg' %}" alt=""
+              style="width: 30px; height: 30px;"/></a>
+            {% endif %}
+            {% if i.linkedln %}
+          <a href="{{i.linkedln}}" class="me-2 way text-reset"
+                ><img src="{% static 'img/icon/social-media-04.svg' %}" alt=""
+              style="width: 30px; height: 30px;"/></a>
+              {% endif %}
+              {% if i.instagram %}
+          <a href="{{i.instagram}}" class="me-2 way text-reset"
+                ><img src="{% static 'img/icon/social-media-01.svg' %}" alt=""
+              style="width: 30px; height: 30px;"/></a>
+              {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+ {%endblock content%}

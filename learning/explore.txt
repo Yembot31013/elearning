@@ -1,0 +1,200 @@
+META
+ALLUSERSPROFILE	==>'C:\\ProgramData'
+APPDATA	==> 'C:\\Users\\Yemi\\AppData\\Roaming'
+COMMONPROGRAMFILES	==> 'C:\\Program Files\\Common Files'
+COMMONPROGRAMFILES(X86)	==> 'C:\\Program Files (x86)\\Common Files'
+COMMONPROGRAMW6432	==> 'C:\\Program Files\\Common Files'
+COMPUTERNAME	==> 'DESKTOP-OB16CHI'
+COMSPEC	==>'C:\\WINDOWS\\system32\\cmd.exe'
+CONTENT_LENGTH	==> ''
+CONTENT_TYPE	==> 'text/plain'
+CSRF_COOKIE	==> 'yYLWCUV3SUp0GcWuIgSrpBINuQrL67P7WX9WQLiTIIb4kIAsVnaT3D7lDpNrZohP'
+DJANGO_SETTINGS_MODULE	==> 'elearning.settings'
+DRIVERDATA	==> 'C:\\Windows\\System32\\Drivers\\DriverData'
+FPS_BROWSER_APP_PROFILE_STRING	==> 'Internet Explorer'
+FPS_BROWSER_USER_PROFILE_STRING	==> 'Default'
+GATEWAY_INTERFACE	==> 'CGI/1.1'
+GEM_HOME	==> 'C:\\Users\\Yemi\\scoop\\apps\\ruby\\current\\gems'
+GEM_PATH	==> 'C:\\Users\\Yemi\\scoop\\apps\\ruby\\current\\gems'
+HOMEDRIVE	==> 'C:'
+HOMEPATH	==> '\\Users\\Yemi'
+HTTP_ACCEPT	==> 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+HTTP_ACCEPT_ENCODING	==> 'gzip, deflate, br'
+HTTP_ACCEPT_LANGUAGE	==> 'en-US,en;q=0.9'
+HTTP_CONNECTION	==> 'keep-alive'
+HTTP_COOKIE	==>
+('csrftoken=yYLWCUV3SUp0GcWuIgSrpBINuQrL67P7WX9WQLiTIIb4kIAsVnaT3D7lDpNrZohP; '
+ 'sessionid=9vhddss9itmbviwqkdovz803l6fr4cwl; '
+ 'twk_idm_key=Tlf1UVVCCJ7rqmbZQB3IQ; TawkConnectionTime=0; '
+ 'twk_uuid_623881cf1ffac05b1d7fa8e2=%7B%22uuid%22%3A%221.F1GTHXD1fSs6YlJ878SGVxTvajDIGDYoAd8kKSiSgU2fSI7YvXTfdh0qHCAkbcV0kNmMonXzzHGax34238tUTq2lkdHZsVepLKdZX7vKYBmCJLfhHnFkrnWVcS46n85aUrdeYHgAF4bG%22%2C%22version%22%3A3%2C%22domain%22%3A%22127.0.0.1%22%2C%22ts%22%3A1652391688505%7D')
+HTTP_HOST	==> '127.0.0.1:8000'
+HTTP_SEC_CH_UA	==> '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"'
+HTTP_SEC_CH_UA_MOBILE	==> '?0'
+HTTP_SEC_CH_UA_PLATFORM	==> '"Windows"'
+HTTP_SEC_FETCH_DEST	==> 'document'
+HTTP_SEC_FETCH_MODE	==> 'navigate'
+HTTP_SEC_FETCH_SITE	==> 'none'
+HTTP_SEC_FETCH_USER	==>'?1'
+HTTP_UPGRADE_INSECURE_REQUESTS	==>'1'
+HTTP_USER_AGENT	==> ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like '
+ 'Gecko) Chrome/101.0.4951.54 Safari/537.36')
+LOCALAPPDATA	==> 'C:\\Users\\Yemi\\AppData\\Local'
+LOGONSERVER	==> '\\\\DESKTOP-OB16CHI'
+NUMBER_OF_PROCESSORS	==> '2'
+ONEDRIVE	==> 'C:\\Users\\Yemi\\OneDrive'
+OS	==> 'Windows_NT'
+PATH==>	
+('C:\\Program Files\\Wireshark;C:\\metasploit-framework\\bin;C:\\Program '
+ 'Files\\Common '
+ 'Files\\Oracle\\Java\\javapath;C:\\xampp\\php;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program '
+ 'Files\\Git\\cmd;C:\\Python31;C:\\Program Files '
+ '(x86)\\GnuWin32\\bin;C:\\cygwin64\\bin;C:\\Program '
+ 'Files\\Redis\\;C:\\Users\\Yemi\\scoop\\apps\\ruby\\current\\bin;C:\\Users\\Yemi\\scoop\\apps\\ruby\\current\\gems\\bin;C:\\Users\\Yemi\\scoop\\shims;C:\\Program '
+ 'Files\\Wireshark;C:\\metasploit-framework\\bin;C:\\xampp\\php;C:\\Users\\Yemi\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\;C:\\Users\\Yemi\\AppData\\Local\\Programs\\Python\\Python310\\;C:\\Users\\Yemi\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Yemi\\AppData\\Local\\Programs\\Microsoft '
+ 'VS Code\\bin;C:\\Program Files\\JetBrains\\PyCharm '
+ '2021.2.3\\bin;C:\\Python31;C:\\Program Files (x86)\\Nmap;C:\\Program Files '
+ '(x86)\\GnuWin32\\bin;C:\\cygwin64\\bin;C:\\Users\\Yemi\\AppData\\Local\\Google\\Cloud '
+ 'SDK\\google-cloud-sdk\\bin;C:\\Users\\Yemi\\AppData\\Local\\Microsoft\\WindowsApps;')
+PATHEXT	==> '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+PATH_INFO	==> '/'
+PROCESSOR_ARCHITECTURE	==> 'AMD64'
+PROCESSOR_IDENTIFIER	==> 'Intel64 Family 6 Model 23 Stepping 10, GenuineIntel'
+PROCESSOR_LEVEL	==> '6'
+PROCESSOR_REVISION	==> '170a'
+PROGRAMDATA	==> 'C:\\ProgramData'
+PROGRAMFILES	==> 'C:\\Program Files'
+PROGRAMFILES(X86)	==> 'C:\\Program Files (x86)'
+PROGRAMW6432	==> 'C:\\Program Files'
+PROMPT	==> '$P$G'
+PSMODULEPATH	==> 
+('C:\\Users\\Yemi\\Documents\\WindowsPowerShell\\Modules;C:\\Users\\Yemi\\AppData\\Local\\Google\\Cloud '
+ 'SDK\\google-cloud-sdk\\platform\\PowerShell')
+PUBLIC	==> 'C:\\Users\\Public'
+PYCHARM	==> 'C:\\Program Files\\JetBrains\\PyCharm 2021.2.3\\bin;'
+QUERY_STRING	==> ''
+REMOTE_ADDR	==> '127.0.0.1'
+REMOTE_HOST	==> ''
+REQUEST_METHOD	==> 'GET'
+RUN_MAIN	==> 'true'
+SCRIPT_NAME	==> ''
+SERVER_NAME	==> 'DESKTOP-OB16CHI'
+SERVER_PORT	==> '8000'
+SERVER_PROTOCOL	==> 'HTTP/1.1'
+SERVER_SOFTWARE	==> 'WSGIServer/0.2'
+SESSIONNAME	==> 'Console'
+SYSTEMDRIVE	==> 'C:'
+SYSTEMROOT	==> 'C:\\WINDOWS'
+TEMP	==> 'C:\\Users\\Yemi\\AppData\\Local\\Temp'
+TMP	==> 'C:\\Users\\Yemi\\AppData\\Local\\Temp'
+USERDOMAIN	==> 'DESKTOP-OB16CHI'
+USERDOMAIN_ROAMINGPROFILE	==> 'DESKTOP-OB16CHI'
+USERNAME	==> 'Yemi'
+USERPROFILE	==> 'C:\\Users\\Yemi'
+WINDIR	==> 'C:\\WINDOWS'
+wsgi.errors	==> <colorama.ansitowin32.StreamWrapper object at 0x00000298C7A18CA0>
+wsgi.file_wrapper	==> <class 'wsgiref.util.FileWrapper'>
+wsgi.input	==> <django.core.handlers.wsgi.LimitedStream object at 0x00000298CA0E8190>
+wsgi.multiprocess	==> False
+wsgi.multithread	==> True
+wsgi.run_once	==> False
+wsgi.url_scheme	==> 'http'
+wsgi.version	==> (1, 0)
+
+*        DJANGO_LANGUAGES	       *
+[('af', 'Afrikaans'),
+ ('ar', 'Arabic'),
+ ('ar-dz', 'Algerian Arabic'),
+ ('ast', 'Asturian'),
+ ('az', 'Azerbaijani'),
+ ('bg', 'Bulgarian'),
+ ('be', 'Belarusian'),
+ ('bn', 'Bengali'),
+ ('br', 'Breton'),
+ ('bs', 'Bosnian'),
+ ('ca', 'Catalan'),
+ ('cs', 'Czech'),
+ ('cy', 'Welsh'),
+ ('da', 'Danish'),
+ ('de', 'German'),
+ ('dsb', 'Lower Sorbian'),
+ ('el', 'Greek'),
+ ('en', 'English'),
+ ('en-au', 'Australian English'),
+ ('en-gb', 'British English'),
+ ('eo', 'Esperanto'),
+ ('es', 'Spanish'),
+ ('es-ar', 'Argentinian Spanish'),
+ ('es-co', 'Colombian Spanish'),
+ ('es-mx', 'Mexican Spanish'),
+ ('es-ni', 'Nicaraguan Spanish'),
+ ('es-ve', 'Venezuelan Spanish'),
+ ('et', 'Estonian'),
+ ('eu', 'Basque'),
+ ('fa', 'Persian'),
+ ('fi', 'Finnish'),
+ ('fr', 'French'),
+ ('fy', 'Frisian'),
+ ('ga', 'Irish'),
+ ('gd', 'Scottish Gaelic'),
+ ('gl', 'Galician'),
+ ('he', 'Hebrew'),
+ ('hi', 'Hindi'),
+ ('hr', 'Croatian'),
+ ('hsb', 'Upper Sorbian'),
+ ('hu', 'Hungarian'),
+ ('hy', 'Armenian'),
+ ('ia', 'Interlingua'),
+ ('id', 'Indonesian'),
+ ('ig', 'Igbo'),
+ ('io', 'Ido'),
+ ('is', 'Icelandic'),
+ ('it', 'Italian'),
+ ('ja', 'Japanese'),
+ ('ka', 'Georgian'),
+ ('kab', 'Kabyle'),
+ ('kk', 'Kazakh'),
+ ('km', 'Khmer'),
+ ('kn', 'Kannada'),
+ ('ko', 'Korean'),
+ ('ky', 'Kyrgyz'),
+ ('lb', 'Luxembourgish'),
+ ('lt', 'Lithuanian'),
+ ('lv', 'Latvian'),
+ ('mk', 'Macedonian'),
+ ('ml', 'Malayalam'),
+ ('mn', 'Mongolian'),
+ ('mr', 'Marathi'),
+ ('ms', 'Malay'),
+ ('my', 'Burmese'),
+ ('nb', 'Norwegian Bokmål'),
+ ('ne', 'Nepali'),
+ ('nl', 'Dutch'),
+ ('nn', 'Norwegian Nynorsk'),
+ ('os', 'Ossetic'),
+ ('pa', 'Punjabi'),
+ ('pl', 'Polish'),
+ ('pt', 'Portuguese'),
+ ('pt-br', 'Brazilian Portuguese'),
+ ('ro', 'Romanian'),
+ ('ru', 'Russian'),
+ ('sk', 'Slovak'),
+ ('sl', 'Slovenian'),
+ ('sq', 'Albanian'),
+ ('sr', 'Serbian'),
+ ('sr-latn', 'Serbian Latin'),
+ ('sv', 'Swedish'),
+ ('sw', 'Swahili'),
+ ('ta', 'Tamil'),
+ ('te', 'Telugu'),
+ ('tg', 'Tajik'),
+ ('th', 'Thai'),
+ ('tk', 'Turkmen'),
+ ('tr', 'Turkish'),
+ ('tt', 'Tatar'),
+ ('udm', 'Udmurt'),
+ ('uk', 'Ukrainian'),
+ ('ur', 'Urdu'),
+ ('uz', 'Uzbek'),
+ ('vi', 'Vietnamese'),
+ ('zh-hans', 'Simplified Chinese'),
+ ('zh-hant', 'Traditional Chinese')]

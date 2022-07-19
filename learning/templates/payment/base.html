@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.88.1" />
+    <title>Pricing example · Bootstrap v5.1</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.1/examples/pricing/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static './assets/dist/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static './css/main.css' %}" />
+    <link rel="stylesheet" href="{% static './css/index.css' %}" />
+
+    <!-- Custom styles for this template -->
+    <link href="{% static './css/pricing.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    {% block content %}{% endblock content %}
+  <footer>
+    <div class="container text-center text-md-start py-5">
+      <div class="footer-wrap">
+        <div class="about">
+          <img src="{% static 'img/logo.png' %}" alt="" >
+          <p class="text-muted py-4">
+            Start working with Firmbee which can provide you with all the tools needed to run an effcieint business
+            remotely.
+          </p>
+          <div class="social-media">
+            <a href="" class="me-2 text-reset"><img src="{% static './img/icon/social-media-01.svg' %}" alt=""></a>
+            <a href="" class="me-2 text-reset"><img src="{% static './img/icon/social-media-02.svg' %}" alt=""></a>
+            <a href="" class="me-2 text-reset"><img src="{% static './img/icon/social-media-03.svg' %}" alt=""></a>
+            <a href="" class="me-2 text-reset"><img src="{% static './img/icon/social-media-04.svg' %}" alt=""></a>
+          </div>
+        </div>
+  
+        <div class="company">
+          <h6 class="fw-bold">Company</h6>
+          <p><a href="">About us</a></p>
+          <p><a href="">Services</a></p>
+          <p><a href="">Team</a></p>
+          <p><a href="">Pricing</a></p>
+          <p><a href="">Project</a></p>
+          <p><a href="">Careers</a></p>
+          <p><a href="">Blog</a></p>
+          <p><a href="">Login</a></p>
+        </div>
+  
+        <div class="useful-links">
+          <h6 class="fw-bold">Useful links</h6>
+          <p><a href="">Terms of </a></p>
+          <p><a href="">Services</a></p>
+          <p><a href="">Privacy Policy</a></p>
+          <p><a href="">Documentation</a></p>
+          <p><a href="">Changelog</a></p>
+          <p><a href="">Components</a></p>
+        </div>
+  
+  
+      </div>
+      <div class="copyright">
+        <p>&copy; <span class="year">2023</span> Codewithyembot | Created by <a href="#">Yembot</a></p>
+  
+      </div>
+    </div>
+  
+  </footer>
+  
+  
+  <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'dist/js/jquery.js' %}"></script>
+  <script src="{% static 'js/customs.js' %}"></script>
+  <script>
+    const year = document.querySelector('.year')
+    const now = new Date();
+    const years = now.getFullYear()
+    year.textContent = years;
+  </script>
+</div>
+
+
+    
+  </body>
+</html>
+

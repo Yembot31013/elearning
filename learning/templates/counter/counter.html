@@ -1,0 +1,204 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+      <!--Main Navigation-->
+  <header>
+    <!-- Intro settings -->
+    <style>
+      /* Default height for small devices */
+      #intro {
+        {% comment %} height: 600px; {% endcomment %}
+        height: 100vh;
+      }
+      @media (max-width: 991px) {
+              #intro {
+              /* Margin to fix overlapping fixed navbar */
+              margin-top: 45px;
+      	}
+      }
+    </style>
+
+    <!-- Background image -->
+    <div id="intro" class="p-5 mt-0 text-center bg-image shadow-1-strong"
+      style="background-image: url('{% static 'img/earth.jpg'%}');">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white px-4">
+            <h1 class="mb-3">Live Class Starting Soon!</h1>
+
+            <!-- Time Counter -->
+            <h3 id="time-counter" class="border border-light my-4 p-4"></h3>
+
+            <p>You can join live class 5min before its begin. </p>
+            <p>You wouldn't be able to join live class if you have attended today before</p>
+            <p>and if your bundle didn't cover up live class</p>
+
+            <a class="btn btn-outline-light btn-lg m-2" href="{% url 'join_zoom_live' zoom_id %}" target="_blank"
+              role="button">Watch Video Class</a>
+            <a class="btn btn-outline-light btn-lg m-2" href="{% url 'about' course_id %}" target="_blank" role="button"
+              rel="nofollow">Go Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-5">
+    {% csrf_token %}
+    <input type="hidden" name="time" value="{{time}}"></input>
+    <input type="hidden" name="zoom_id" value="{{zoom_id}}"></input>
+    <input type="hidden" name="course_id" value="{{course_id}}"></input>
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4 d-lg-flex align-items-center">
+            <div>
+              <h4><strong>Subscribe to stay up to date </strong></h4>
+              <p class="text-muted">
+                This countdown is only for people attending live class and those that pay for video class, videos will be updated 5min after live class has ended.
+                If you haven subscribe, please subscribe to know when the class as start and updated.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <form method="post">
+              {% csrf_token %}
+              <!-- Name input -->
+              <div class="form-outline mb-4">
+                {{form.name}}
+                <label class="form-label" for="form5Example1">Name</label>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                {{form.email}}
+                <label class="form-label" for="form5Example2">Email address</label>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4 m-0">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+    </div>
+  </main>
+  <!--Main layout-->
+   <hr class="mb-5" />
+
+  <div class="container">
+    <div class="row justify-content-center">
+      {% for class in zoom_classes %}
+      {% if forloop.counter == 1 %}
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card border">
+          <div class="card-header text-center bg-primary text-light">{{class.topic}}</div>
+          <div class="card-body text-center">
+            <p class="card-title mb-3">{{class.start_time}}</p>
+            <div class="card-text">05:35pm</div>
+          </div>
+          <div class="card-footer text-center bg-dark text-light">Starting Next</div>
+        </div>
+      </div>
+      {% else %}
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card border">
+          <div class="card-header text-center bg-dark text-light">{{class.topic}}</div>
+          <div class="card-body text-center">
+            <p class="card-title mb-3">{{class.start_time}}</p>
+            <div class="card-text">05:35pm</div>
+          </div>
+          <div class="card-footer text-center bg-primary text-light">Starting soon</div>
+        </div>
+      </div>
+      {% endif %}
+      {%empty%}
+      <div class="container w-100 h-100 m-auto">
+        <h1 class="d-flex justify-content-center align-items-center">
+          sorry nothing is available for now
+        </h1>
+      </div>
+  {% endfor %}
+    </div>
+  </div>
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
+    <div class="py-4 text-center">
+      <a role="button" class="btn btn-primary btn-lg m-2"
+        href="" rel="nofollow" target="_blank">
+        Watch Video Class
+      </a>
+      <a role="button" class="btn btn-primary btn-lg m-2" href="{% url 'upgrade_enroll' course_id payment_id%}" target="_blank">Upgrade Your Bundle
+      </a>
+    </div>
+
+    <hr class="m-0" />
+
+    <div class="text-center py-4 align-items-center">
+      <p>Follow CWY on social media</p>
+      <a href="" class="btn btn-primary m-1" role="button"
+        rel="nofollow" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © <span class="year">2023</span> Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">CodeWithYembot.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
+
+    <script src="{% static 'js/alertify.min.js' %}"></script>
+    <script src="{% static 'dist/js/jquery.js' %}"></script>
+    <!-- Time Counter -->
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+    <!-- Custom scripts -->
+    <script>
+      alertify.set("notifier", "position", "top-right");
+      {% for msg in messages %}
+      alertify.success("{{msg}}");
+      {% endfor %}
+    </script>
+</body>
+</html>
