@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-5#qd*765=$mb0h#ld6t)5&-tlex%@)aj=(pnh#i$4x(b1w4l*_
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-# CSRF_TRUSTED_ORIGINS = ['https://fair-parents-prove-41-58-57-52.loca.lt']
+CSRF_TRUSTED_ORIGINS = ['https://e70f-105-112-28-104.eu.ngrok.io']
 
 
 # Application definition
@@ -408,4 +408,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 GEOIP_PATH =os.path.join('geoip')
 
 # SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
