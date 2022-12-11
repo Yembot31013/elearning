@@ -1,0 +1,9 @@
+django-jazzmin
+django
+django-defender
+django-allauth
+django-user-visit
+django_user_agents
+geoip2
+django-ckeditor
+gunicorn
