@@ -6,4 +6,3 @@ django-user-visit
 django_user_agents
 geoip2
 django-ckeditor
-gunicorn
